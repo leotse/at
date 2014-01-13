@@ -11,6 +11,8 @@
   "dependencies": {
     "yahoo-finance": "~0.1.0",
     "mongoose": "~3.8.3",
-    "async": "~0.2.9"
+    "async": "~0.2.9",
+    "moment": "~2.5.0",
+    "underscore": "~1.5.2"
   }
 }
