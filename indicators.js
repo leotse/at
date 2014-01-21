@@ -15,12 +15,20 @@ module.exports = function TechnicalIndicators(opts) {
 
 	// updates all enabled technical indicators
 	// expects a quote object
-	self.update = function(quote) {
+	self.tick = function(quote) {
 		history.push(quote);
 
-		indicators.sma50 = misc.avg(history.get(50, 'close'));
-		indicators.sma100 = misc.avg(history.get(100, 'close'));
-		indicators.sma200 = misc.avg(history.get(200, 'close'));
+		var a50 = history.get(50, 'adjClose');
+		if(a50.length < 50) { indicators.sma50 = 0; }
+		else { indicators.sma50 = misc.avg(history.get(50, 'adjClose')); }
+
+		var a100 = history.get(100, 'adjClose');
+		if(a100.length < 100) { indicators.sma100 = 0; }
+		else { indicators.sma100 = misc.avg(history.get(100, 'adjClose')); }
+
+		var a200 = history.get(200, 'adjClose');
+		if(a200.length < 200) { indicators.sma200 = 0; }
+		else { indicators.sma200 = misc.avg(history.get(200, 'adjClose')); }
 	};
 
 	// returns all indicators as obj

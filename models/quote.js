@@ -23,6 +23,7 @@ var schema = new Schema({
 
 // indexes
 schema.index({ symbol: 1, date: -1 }, { unique: true });
+schema.index({ date: 1 });
 
 // export
 module.exports = schema;

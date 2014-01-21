@@ -8,7 +8,8 @@ var yf = require('yahoo-finance');
 var models = require('../models');
 
 // arguments
-var symbols = ['AAPL', 'BJRI', 'BRK-B', 'DAR', 'DDD', 'DIS', 'NOV', 'SBUX', 'WFM'];
+// var symbols = ['AAPL', 'BJRI', 'BRK-B', 'DAR', 'DDD', 'DIS', 'NOV', 'SBUX', 'WFM'];
+var symbols = ['C' ];
 var from = null; var to = null;
 // var from = '2013-01-01';
 // var to = '2013-01-05';
